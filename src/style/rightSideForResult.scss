@@ -1,0 +1,128 @@
+@import 'main_style.scss';
+.result-canel{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .content{
+    box-shadow: $shadow_card,$shadow_card;
+  	flex:1;
+  }
+  .tab{
+  	flex: 0 0 40px;
+  	text-align: center;
+  	.last-btn{
+  		box-shadow: $shadow_card,$shadow_card;
+  		background-color: white;
+  		border: none;
+  		font-size: 16px;
+  		height: 150px;
+  	}
+  	button{
+  		@extend .last-btn;
+  		border-bottom: 1px dashed rgba(0,0,0,0.5);
+      outline:none;
+  	}
+  }
+}
+
+@mixin chartBar($width,$height){
+  width: $width;
+  height: $height;
+  margin-bottom: $card-margin_padding;
+  box-shadow: $shadow_card,$shadow_card;
+}
+.chartAnalysis{
+  width: 100%;
+  height: 100%;
+  min-width: 934px;
+  overflow-y: scroll;
+  &_map{
+    height: 400px;
+    width: 99.5%;
+  }
+  td{
+    min-width: 310px;
+    height:233px;
+    box-shadow: $shadow_card,$shadow_card;
+    padding-right: 0px;
+    .add-chart-container{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: 233px;
+      vertical-align: middle;
+      color: lightgray;
+      font-size: 200px;
+      font-weight: bold;
+    }
+    .chart{
+      width:310px;
+      height: 248px;
+      padding-right: 0px;
+    }
+    .chart-par-setting{
+      width: 100%;
+      height: 100%;
+      margin-left: $card-margin_padding*2;
+      p{
+        color:$title_color;
+      }
+      a{
+        display: inline-block;
+        width: 75px;
+      }
+      input{
+        width: 180px;
+        margin-left: $card-margin_padding -4px;
+      }
+      select{
+        border: 0.5px solid lightgray;
+        outline: none;
+        background-color: rgba(0,0,0,0);
+        width: 188px;
+      }
+      img{
+        width: 10px;
+        height: 10px;
+        z-index: 3;
+      }
+      button{
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 4px;
+        background-color: $title_color;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+        margin-top: $card-margin_padding*5;
+        margin-left: 35%;
+      }
+    }
+  }
+}
+
+#code{
+  padding: $card-margin_padding;
+  color:black;
+  font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";
+  font-size:13px;
+  line-height: 20px;
+  .keyword{color:#7f0055;font-weight:bold}
+  .placeholder{margin-left:15px}
+  .comments{color:#3f7f5f}
+  .value{color:orange;}
+  .error{color:red;}
+}
+
+.precision_container{
+  width: 100%;
+  height: 100%;
+  &_chart{
+    @include chartBar(99%,60%);
+  }
+  &_description{
+    margin-top:  $card-margin_padding*2;
+    @include chartBar(99%, 36%);
+  }
+}

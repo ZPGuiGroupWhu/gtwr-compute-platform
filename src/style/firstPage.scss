@@ -1,0 +1,133 @@
+@import 'main_style.scss';
+
+$title_font_size:27px;
+$shadow_card_1:0 2px 2px 0 $black_for_shadow;
+
+.container{
+  width: 100%;
+  height: 100%;
+  #hello{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    #dynamic{
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .intro-text{
+    display: flex;
+    justify-content: center;
+    .title{
+      position: absolute;
+      height: 50px;
+      width: 427px;
+      top: 20%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      color:white;
+      font-size: $title_font_size * 2;
+    }
+    .link{
+      color:lightseagreen;
+      position: absolute;
+      display: block;
+      height: 50px;
+      width: 320px;
+      top: 95%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }  
+} 
+
+.slides{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content:center;
+  .playBtn{
+    position: absolute;
+    bottom: 10px;
+    margin:0px auto; 
+    .circle{
+      width:11px;
+      height:11px;
+      background-color: gray;
+      margin-right: 20px;
+      border-radius: 5.5px;
+      border:none;
+    }
+    .circle:active,.circle:hover,.on{
+      background-color:$title_color;
+    }
+  }
+  &_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    &_top{
+      flex: 1;
+      display: flex;
+      &_img{
+        flex: 1;
+        text-align: center;
+        box-shadow: $shadow_card_1,$shadow_card_1;
+        &_img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      &_chartContainertop{
+        flex: 0 0 310px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &_chart{
+          width: 310px;
+          height: 50%;
+          box-shadow: $shadow_card_1,$shadow_card_1;
+        }
+      }
+    }
+    &_bottom{
+      flex: 0 0 260px;
+      display: flex;
+      &_chart{
+        flex: 0 0 310px;
+        width: 310px;
+        height: 260px;
+        box-shadow: $shadow_card_1,$shadow_card_1;
+      }
+      &_left{
+        flex: 1;
+        display: flex;
+        &_paper{
+          flex: 0 0 450px;
+          width: 50%;
+          padding: 5px;
+          box-shadow: $shadow_card_1,$shadow_card_1;
+          &_img{
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightgray;
+          }
+        }
+        &_abstract{
+            flex: 1;
+            padding: 10px;
+            box-shadow: $shadow_card_1,$shadow_card_1;
+        }
+      }
+    }
+
+  }
+}
+

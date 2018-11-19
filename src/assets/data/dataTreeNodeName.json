@@ -1,0 +1,30 @@
+[{
+	"name":"Canada house price",
+	"centerPosition":[],
+	"zoom": 10,
+	"dataContent": "housePrice",
+	"url":"../assets/data/demoData/",
+	"children": [
+		{"name":"Oprice","decribeName":"原始房价数据"},
+		{"name":"Constant","decribeName":"常量"},
+		{"name":"Living","decribeName":"居住环境"},
+		{"name":"Quality","decribeName":"空气质量"},
+		{"name":"Structure","decribeName":"基础设施"},
+		{"name":"Renovation","decribeName":"装修情况"},
+		{"name":"Condiction","decribeName":"传导"},
+		{"name":"Greenspace","decribeName":"绿化面积"},
+		{"name":"Traffic","decribeName":"交通情况"},
+		{"name":"VIEW","decribeName":"视野环境"}
+	]
+},{
+	"name":"GWR test data",
+	"dataContent":"fakeData",
+	"centerPosition":[],
+	"zoom":17,
+	"url":"../assets/data/demoData/",
+	"children":[
+		{"name":"PctBach","decribeName":"参数1"},
+		{"name":"TotPop90","decribeName":"参数2"},
+		{"name":"PctRural","decribeName":"参数3"}
+	]
+}]

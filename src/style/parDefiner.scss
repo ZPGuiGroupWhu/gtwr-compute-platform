@@ -1,0 +1,83 @@
+@import 'main_style.scss';
+
+.par-container{
+  @include container($left_sider_container_height);
+  margin-top: $card-margin_padding;
+  display: flex;
+  flex-direction: column;
+  .par-list{
+    margin-left:10px;
+    .par-title{
+      display:inline-block;
+      width:80px;
+      text-align:left;
+    }
+    input{
+      width: $left-side-width - 110;
+    }
+    select{
+      width: 20px;
+      margin-left: -26px;
+      border: none;
+      outline: none;
+      background-color: rgba(255,255,255,0);
+    }
+    p{
+      line-height: 10px;
+      color:$grey;
+      font-size:14px;
+    }
+    .submit{
+      width: 100px;
+      height: 30px;
+      float: right;
+      margin-right: 5%;
+      margin-top: -18px;
+      display: inline-block;
+      border-radius: 4px;
+      background-color: rgba(0,139,139,0.8);
+      border: none;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+    .submit span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+  }
+  
+  .GWRtab{
+    text-align: center;
+    button{
+      color: lightseagreen;
+      font-size: 15px;
+      font-weight: bold;
+  		background-color: white;
+  		border: none;
+  		font-size: 16px;
+      width: 150px;
+      margin-top:5px;
+      margin-bottom:5px;
+      outline:none;
+      cursor: pointer;
+    }
+    .active{
+      border:2px solid dodgerblue;
+    }
+  }
+
+}
+
+.btn-animation{
+  animation: btnAnimation 5s linear;
+}
+@keyframes btnAnimation{
+  from{
+    width: 0px;
+  }
+  to{
+    width: 100px;
+  }
+}

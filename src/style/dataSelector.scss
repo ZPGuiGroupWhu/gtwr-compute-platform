@@ -1,0 +1,142 @@
+@import 'main_style.scss';
+.data-selector{
+  background-color: white;
+  box-shadow: $shadow_card,$shadow_card;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .data-list{
+  	margin-left:10px;
+  	.parent_node{
+  		margin-top: 5px;
+  		transition: all 0.5s;
+  		width: $left-side-width - 40;
+  		cursor: pointer;
+  		img{
+  			vertical-align: middle;
+        	width: 20px;
+  		}
+  		b{
+  			vertical-align: middle;
+  		}
+  	}
+  	.parent_node:hover{
+  		background-color: $hover_color;
+  	}
+  	.parent_node span{
+  		float: right;
+  	}
+  	.child_list{
+  		margin-left: 20px;
+		width: $left-side-width - 55;
+		#file{
+			opacity:0; position: absolute;top: 11px;left: 5px;padding-left: 100px;width:150px;cursor:pointer;height: 50px;
+		}
+  		p{
+			margin: 5px;
+  		}
+      	span{
+        	float: right;
+		}
+		.child_node{
+			.highlight{
+				background-color:#F5F5F5;
+			}
+			button{
+				font-size: 0.8em;
+				width: 7em;
+				margin:0;
+				padding:0;
+				border-radius: 2px;
+				border:none;
+				outline:none;
+				background-color: lightseagreen;
+				color: #FFFFFF;
+			  }
+		}
+		.child_node_img{
+			width: 15px;
+		}
+      .grand_son_list{
+        margin-left: 20px;
+        font-size: 13px;
+        img{
+          width: 13px;
+        }
+        button{
+          font-size: 0.8em;
+          width: 2.5em;
+          margin:0;
+          padding:0;
+          border-radius: 2px;
+          border:none;
+          outline:none;
+          background-color: lightseagreen;
+          color: #FFFFFF;
+        }
+         //按钮高亮样式
+        .highlight{
+              border:2px solid dodgerblue;
+        }
+      }
+  	}
+  }
+
+  .data_drag_container{
+  	height: 80px;
+  	background-color: rgba(0,0,0,0.05);
+  	border: 1px dashed rgba(0,0,0,0.7);
+  	margin: 10px;
+  	text-align: center;
+  	img{
+  		margin-top: 20px;
+  	}
+  	p{
+		margin-top: 0px;
+  	}
+  }
+}
+
+
+.black_overlay{  
+ display: none;  
+ position: absolute;  
+ top: 0%;  
+ left: 0%;  
+ width: 100%;  
+ height: 100%;  
+ background-color: black;  
+ z-index:1001;  
+ -moz-opacity: 0.8;  
+ opacity:.80;  
+ filter: alpha(opacity=80);  
+}  
+.white_content {  
+ display: none;  
+ position: absolute;  
+ top: 10%;  
+ left: 10%;  
+ width: 80%;  
+ height: 80%;  
+ border: 16px solid lightblue;  
+ background-color: white;  
+ z-index:1002;  
+ overflow: auto;  
+}  
+.white_content_small {  
+ display: none;  
+ position: absolute;  
+ top: 20%;  
+ left: 30%;  
+ width: 40%;  
+ height: 50%;  
+ border: 16px solid lightblue;  
+ background-color: white;  
+ z-index:1002;  
+ overflow: auto;  
+}  
+
+
+
+
+

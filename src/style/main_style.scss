@@ -1,0 +1,153 @@
+$black_for_shadow: rgba(0,0,0,0.1);
+$shadow_card:0 1px 1px 0 $black_for_shadow;
+$title_color:lightseagreen;
+$card-margin_padding: 7px;
+$title_height:30px;
+$left_sider_container_height:600px;
+$left-side-width: 350px;
+$hover_color:#f5f5f5;
+$grey: rgba(0,0,0,0.5);
+
+@mixin container($height){
+  background-color: white;
+  box-shadow: $shadow_card,$shadow_card;
+  width: 100%;
+  height: $height;
+}
+
+.title{
+    height: $title_height;
+    p{
+      color:$title_color;
+      font-size: 17px;
+      font-weight: bold;
+      margin: 5px 10px;
+    }   
+}
+
+.map-container{
+  @include container(60%);
+  min-height: 400px; 
+}
+
+// 地图图例
+.map_legend { 
+  text-align: left; 
+  color: #555; 
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px; 
+  box-shadow:$shadow_card,$shadow_card; 
+  .map_legend_div { width: 18px; height: 12px; opacity: 0.7; display: inline-block;}
+  .map_legend_font{font: 14px Arial, Helvetica, sans-serif;}
+} 
+
+.right-container{
+  display: flex;
+  flex-direction:column;
+  height: 100%; 
+}
+
+.right-container-descrip{
+  @include container(99%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 99.5%;
+  &-info{
+    flex: 0 0 320px;
+    box-shadow: $shadow_card,$shadow_card; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: scroll;
+    header{
+      flex: 0 0 10px;
+      p{
+        color:$title_color;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 2px 10px;
+      } 
+    }
+    &_detail{
+      padding: 0 $card-margin_padding + 4px;
+      flex: 1;
+      p{
+        margin-top: 5px;
+        margin-bottom: 10px;
+        line-height: 20px;
+      }
+      .title{
+        width: 110px;
+        font-weight: bold;
+      }
+      .content{
+        width: 60%;
+      }
+    }
+  }
+  &-extent{
+    margin-top: $card-margin_padding;
+    flex: 1;
+    box-shadow: $shadow_card,$shadow_card;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    header{
+      flex: 0 0 10px;
+      p{
+        color:$title_color;
+        font-size: 17px;
+        font-weight: bold;
+        margin: 2px 10px;
+      } 
+    }
+    &_map{
+      padding: 0 $card-margin_padding + 4px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      span{
+        font-weight: bold;
+      }
+      p{
+        width: 70px;
+        padding:1px;
+        height: 20px;
+        margin: 0 auto;
+        border: 1px solid lightgray;
+      }
+      &_top,&_bot{
+        flex: 0 0 50px;
+        text-align: center;
+      }
+      &_mid{
+        flex:1;
+        display: flex;
+        .left-cor,.right-cor{
+          flex: 0 0 100px;
+          text-align: center;
+          padding-top: 10%;
+        }
+        #extent-map{
+          flex: 1;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index:1000;
+  img{
+    position: absolute;
+    top: 20px;
+    right:20px;
+  }
+}

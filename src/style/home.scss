@@ -1,0 +1,23 @@
+@import 'main_style.scss';
+
+.home{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	.left-side{
+	  flex: 0 0 $left-side-width;
+	  padding: $card-margin_padding;
+	  border-right: 1px solid $black_for_shadow;
+	  overflow:auto; 
+	}
+	.right-side{
+	  flex: 1;
+	  padding:$card-margin_padding;
+	  overflow-y:auto; 
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+  .left-side{display: none; }
+}

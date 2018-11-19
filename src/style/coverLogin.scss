@@ -1,0 +1,119 @@
+@import 'main_style.scss';
+$margin: 15px;
+
+.cover-login{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index:1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		position: absolute;
+		top: 20px;
+		right:20px;
+	}
+	.box-container{
+		position:absolute;
+		width:350px - $margin * 2;
+		height: auto;
+		background-color: white;
+		box-shadow: $shadow_card,$shadow_card;
+		padding: $margin * 2;
+		padding-right:$margin * 3;
+		.main{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			display: flex;
+			justify-content:center;
+			hr{
+				position: absolute;
+				top: 0px;
+				width: 100%;
+			}
+			.login-title{
+				position: absolute;
+				background-color: white;
+				color:$title_color;
+				width: 100px;
+				height: 2em;
+				top:0;
+				text-align: center;
+				b{
+					line-height: 1em;
+					margin-top: 5px;
+				}
+			}
+			.login{
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				margin-top: $margin * 2;
+				input{
+					margin-top: $margin;
+					width: 99%;
+					height: 30px;
+				}
+				button{
+					margin-top: $margin;
+					width: 100%;
+			    	height: 40px;
+			    	border-radius: 4px;
+			    	background-color: $title_color;
+			     	border: none;
+			    	color: #FFFFFF;
+			     	cursor: pointer;
+				}
+				.eye_img{
+					position: absolute;
+					top: 105px;
+					right:20px;
+					width: 30px;
+				    height: 20px;
+				}
+				.yanzhengma_input{
+					margin-top: $margin;
+					float: left;
+					width: 69%;
+					height: 30px;
+					display: inline;
+				}
+				.verification{
+					-webkit-appearance: button;
+					width:28%;
+				    margin-left:1%;
+					height: 35px;
+					display: inline;
+					float: right;
+					border-radius: 4px;
+					background-color: white;
+					outline: none;
+				}
+				div{
+					margin-top: $margin;
+					text-decoration: underline;
+					color: $title_color;
+					font-size: 0.8em;
+					overflow: hidden;
+					clear: both;
+				}
+				.disappear{
+				     visibility:hidden;
+				}				
+				.send_msg{
+				    width:28%;
+				    margin-left: 1%;
+					height: 35px;
+					border: none;
+					outline: none;
+				}
+				button::-moz-focus-inner,
+				input[type="button"]::-moz-focus-inner { border:none; padding:0; }
+			} 
+		}
+	}
+}
+

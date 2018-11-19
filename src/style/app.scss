@@ -1,0 +1,64 @@
+@import 'main_style.scss';
+
+.wrap{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  
+  .header{
+	  z-index: 1000;
+    height: 55px;
+    width: 100%;
+    background-color: white;
+    box-shadow: $shadow_card, $shadow_card;
+    display: flex;
+    position:absolute;
+    align-items:center;
+    justify-content: space-between;
+    p{
+      margin:auto 10px;
+      font-family: 'Yu Gothic UI Semibold';
+      font-size: 22px;
+      span{
+        color: $title_color;
+        font-weight: bold;
+      }
+    }
+    .login-container{
+      .loginLink{
+        font-size: 12px;
+        color:$title_color;
+        margin-right: 10px;
+        text-decoration: none;
+        cursor:pointer;
+      }   
+      .active{
+      color:#38f;
+      } 
+      .userLogin{
+        font-size: 12px;
+        color:black;
+        margin-right:10px;
+        float:left;
+      }
+      .exit{
+        font-size: 12px;
+        color:$title_color;
+        margin-right: 10px;
+        float:left;
+        cursor:pointer;
+      }
+    }
+  }
+  .main-content{
+    position: absolute;
+    top:55px;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+  }
+}

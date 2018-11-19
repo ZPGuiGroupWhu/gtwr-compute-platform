@@ -1,0 +1,15 @@
+{
+	"dataName":"house price",
+	"properties": [
+		{"name":"Price"},
+		{"name":"constant"},
+		{"name":"Living"},
+		{"name":"quality"},
+		{"name":"structure"},
+		{"name":"renovation"},
+		{"name":"condiction"},
+		{"name":"greenspace"},
+		{"name":"Traffic"},
+		{"name":"VIEW"}
+	]
+}

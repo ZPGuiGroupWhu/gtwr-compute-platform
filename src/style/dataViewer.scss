@@ -1,0 +1,100 @@
+@import 'main_style.scss';
+
+.data-container{
+  background-color: white;
+  box-shadow: $shadow_card,$shadow_card;
+  width: 100%;
+  margin-top: $card-margin_padding;
+  display: flex;
+  flex-direction: column;
+  height:40%;
+  min-height: 200px;
+  table{
+    margin-left:10px;
+    border: 1px solid #F5F5F5;
+    margin:$card-margin_padding;
+    border-collapse: collapse;
+    width:95%;
+    text-align: center;
+    td,th{
+      border: 1px solid #F5F5F5;
+    }
+    th{
+      background-color: $title_color;
+    }
+    tr{
+      height: 30px;
+    }
+    tr:hover{
+      background-color: #F5F5F5;
+    }
+  }   
+}
+
+.data-head{
+  background-color: white;
+  box-shadow: $shadow_card,$shadow_card;
+  width: 100%;
+  margin-top: $card-margin_padding;
+  display: flex;
+  flex-direction: column;
+  table{
+    margin-left:10px;
+    border: 1px solid #F5F5F5;
+    margin:$card-margin_padding;
+    border-collapse: collapse;
+    width:97%;
+    text-align: center;
+    td,th{
+      border: 1px solid #F5F5F5;
+    }
+    th{
+      background-color: $title_color;
+    }
+    tr{
+      height: 30px;
+    }
+    tr:hover{
+      background-color: #F5F5F5;
+    }
+  }   
+}
+
+
+.data-table{
+  background-color: white;
+  box-shadow: $shadow_card,$shadow_card;
+  width: 100%;
+   height:250px;
+  overflow-y:scroll;
+  margin-top: $card-margin_padding;
+  display: flex;
+  flex-direction: column;
+  table{
+    margin-left:10px;
+    border: 1px solid #F5F5F5;
+    margin:$card-margin_padding;
+    border-collapse: collapse;
+    width:97%;
+    text-align: center;
+    td,th{
+      border: 1px solid #F5F5F5;
+    }
+    th{
+      background-color: $title_color;
+    }
+    tr{
+      height: 30px;
+    }
+    tr:hover{
+      background-color: #F5F5F5;
+    }
+  }   
+}
+.data-table>table, .data-head>table {
+    table-layout: fixed;
+}
+.data-container .data-table{
+    flex-grow : 1;
+    overflow-y : scroll;
+}
